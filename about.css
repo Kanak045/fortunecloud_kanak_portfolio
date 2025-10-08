@@ -304,21 +304,23 @@ body {
   }
 }
 /* =========================
-   Dark / Light Mode Styles
+   🌙 Dark / Light Mode Styles (Fixed + Enhanced)
    ========================= */
 
+/* Dark mode variable overrides */
 body.dark-mode {
   --bg: #0f1220;
   --text: #eaeaf0;
   --card: #151933;
-  --brand-1: #6a85ff;
-  --brand-2: #8ea8ff;
+  --brand1: #6a85ff;     /* fixed variable names */
+  --brand2: #8ea8ff;     /* fixed variable names */
+  --muted: #b5b8c7;
   --shadow: 0 2px 18px rgba(0, 0, 0, 0.45);
   background: var(--bg);
   color: var(--text);
 }
 
-/* Navbar in Dark Mode */
+/* Navbar in dark mode */
 body.dark-mode .navbar {
   background: #151933;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
@@ -326,6 +328,7 @@ body.dark-mode .navbar {
 
 body.dark-mode .nav-links li a {
   color: #eaeaf0;
+  transition: color 0.3s ease;
 }
 
 body.dark-mode .nav-links li a.active {
@@ -343,6 +346,10 @@ body.dark-mode .secondary {
   color: #8ea8ff;
 }
 
+body.dark-mode .secondary:hover {
+  background: rgba(142, 168, 255, 0.15);
+}
+
 /* Hero Section */
 body.dark-mode .hero {
   background: linear-gradient(90deg, #1e3c72, #2a5298);
@@ -358,14 +365,46 @@ body.dark-mode .contact form {
   box-shadow: 0 2px 18px rgba(0, 0, 0, 0.45);
 }
 
+/* Input fields in contact form */
+body.dark-mode .contact input,
+body.dark-mode .contact textarea {
+  background: #11162b;
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #eaeaf0;
+}
+body.dark-mode .contact input::placeholder,
+body.dark-mode .contact textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
 /* Footer */
-body.dark-mode footer {
+body.dark-mode footer,
+body.dark-mode .site-footer {
   background: #151933;
   color: #eaeaf0;
 }
 
-/* Smooth Transition */
-body, .navbar, .project-card, .skill-card, .contact form, footer {
-  transition: all 0.3s ease-in-out;
+/* 🌗 Smooth transition for theme switch */
+body,
+.navbar,
+.project-card,
+.skill-card,
+.contact form,
+footer,
+.site-footer,
+.hero {
+  transition: background 0.4s ease, color 0.4s ease, box-shadow 0.4s ease, border 0.3s ease;
 }
 
+/* 🌙 Theme toggle button glow */
+#theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+#theme-toggle:hover {
+  transform: scale(1.1);
+  text-shadow: 0 0 8px var(--brand2);
+}
