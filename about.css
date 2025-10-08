@@ -303,3 +303,69 @@ body {
     order: -1; /* put photo on top for mobile */
   }
 }
+/* =========================
+   Dark / Light Mode Styles
+   ========================= */
+
+body.dark-mode {
+  --bg: #0f1220;
+  --text: #eaeaf0;
+  --card: #151933;
+  --brand-1: #6a85ff;
+  --brand-2: #8ea8ff;
+  --shadow: 0 2px 18px rgba(0, 0, 0, 0.45);
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* Navbar in Dark Mode */
+body.dark-mode .navbar {
+  background: #151933;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
+}
+
+body.dark-mode .nav-links li a {
+  color: #eaeaf0;
+}
+
+body.dark-mode .nav-links li a.active {
+  color: #8ea8ff;
+}
+
+/* Buttons */
+body.dark-mode .primary {
+  background: #8ea8ff;
+  color: #0f1220;
+}
+
+body.dark-mode .secondary {
+  border: 2px solid #8ea8ff;
+  color: #8ea8ff;
+}
+
+/* Hero Section */
+body.dark-mode .hero {
+  background: linear-gradient(90deg, #1e3c72, #2a5298);
+  color: #fff;
+}
+
+/* Cards (skills, projects, contact form) */
+body.dark-mode .project-card,
+body.dark-mode .skill-card,
+body.dark-mode .contact form {
+  background: #1a1e33;
+  color: #eaeaf0;
+  box-shadow: 0 2px 18px rgba(0, 0, 0, 0.45);
+}
+
+/* Footer */
+body.dark-mode footer {
+  background: #151933;
+  color: #eaeaf0;
+}
+
+/* Smooth Transition */
+body, .navbar, .project-card, .skill-card, .contact form, footer {
+  transition: all 0.3s ease-in-out;
+}
+
