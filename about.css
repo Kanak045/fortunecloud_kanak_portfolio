@@ -26,10 +26,11 @@ body {
 
 /* ========= Layout Helpers ========= */
 .container {
-  max-width: 1000px;
+  max-width: 1200px;   /* wider container */
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 40px;     /* extra breathing space */
 }
+
 
 /* ========= Header ========= */
 .site-header {
@@ -174,9 +175,11 @@ body {
 
 /* ========= Timeline ========= */
 .timeline-section {
-  padding: 36px 0;
-  text-align: center;
+  background: #f8faff;
+  border-radius: 20px;
+  padding: 40px 0;
 }
+
 .timeline-section h2 {
   color: var(--brand1);
   margin: 0 0 18px;
@@ -184,40 +187,36 @@ body {
 
 .timeline {
   position: relative;
-  margin: 8px 0 0;
-  padding-left: 24px;
+  margin: 40px auto;
+  padding-left: 40px;
+  max-width: 1000px; /* centers the line with content */
 }
 .timeline::before {
-  content: "";
-  position: absolute;
-  left: 12px;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background: linear-gradient(180deg, rgba(30, 60, 114, 0.2), rgba(42, 82, 152, 0.2));
+  left: 20px;
+  width: 3px;
+  background: linear-gradient(180deg, rgba(30, 60, 114, 0.25), rgba(42, 82, 152, 0.25));
 }
 .tl-item {
   position: relative;
-  margin: 18px 0 22px;
+  margin: 32px 0;
 }
+
 .tl-dot {
-  position: absolute;
-  left: 4px;
-  top: 6px;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background: #fff;
-  border: 3px solid var(--brand2);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  width: 14px;
+  height: 14px;
+  top: 12px;
+  left: 8px;
 }
+
 .tl-card {
   background: var(--card);
   box-shadow: var(--shadow);
   border-radius: var(--radius);
-  padding: 16px 18px;
+  padding: 22px 26px;
   text-align: left;
+  width: calc(100% - 80px); /* makes cards fill most of the width */
 }
+
 .tl-card h3 {
   margin: 0 0 8px;
   color: var(--brand2);
