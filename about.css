@@ -1,4 +1,25 @@
 /* ========= Theme Vars ========= */
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(180deg, rgba(30,60,114,.25), rgba(42,82,152,.25));
+}
+.tl-dot {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  top: 10px;
+  left: 13px;
+  background: var(--brand2);
+  border: 3px solid #fff;
+  border-radius: 50%;
+  box-shadow: var(--shadow);
+}
+
 :root {
   --bg: #f4f7fa;
   --text: #222;
